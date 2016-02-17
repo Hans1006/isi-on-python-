@@ -1,0 +1,72 @@
+{% extends "store/front-base.html" %}
+{% load staticfiles %}
+{% block title %}Home - ISI Store{% endblock %}
+
+{% block head %}
+  <style>
+    html {
+      background: white url('{% static "cover.jpg"%}') no-repeat center center;
+      background-size:cover;
+      min-height: 100%;
+    }
+
+    body { background: none; }
+
+    .marketing-column {
+      padding: 1em 2em;
+      border-radius: 6px;
+      background: rgba(220, 220, 220, 0.8);
+    }
+
+    footer { display: none; }
+    .footer, .footer a { color: rgba(255, 255, 255, 0.4); }
+    p.admin a { color: rgba(255, 255, 255, 0.6); }
+
+  </style>
+{% endblock %}
+
+{% block main %}
+<div class="jumbotron text-center">
+  <h2>Professional Router Reseller</h2>
+  <p class="lead">At ISI store, our vision is to be Earth's most customer centric company;
+      to build a place where people can come to find and discover virtually any router they want to buy online.
+      With ISI store, we endeavor to build that same destination both in Macao and worldwide
+      by giving customers more of what they want – vast selection, low prices, fast and reliable delivery,
+      and a trusted and convenient online shopping experience – and provide sellers a world-class e-commerce platform.</p>
+
+  <p><a class="btn btn-lg btn-success" role="button"
+        href="{% url 'category:index' %}">View our products</a></p>
+</div>
+
+<div class="row marketing">
+  <div class="col-lg-6">
+    <div class="marketing-column">
+      <h4>Professional</h4>
+      <p>All the products we sell come with a whole line of professional solutions, no matter who you are, you will find the most suitable routers.</p>
+      <h4>Reliable</h4>
+      <p>We are committed to ensure 100% Purchase Protection for your shopping done on ISI store.</p>
+      <h4>Security</h4>
+      <p>you can benefit from a safe and secure online ordering experience and multiple recognized payment options.</p>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="marketing-column">
+      <h4>Fast</h4>
+      <p>All the products are shipped by the best express services.</p>
+      <h4>Convenience</h4>
+      <p>We guarentee a convenient online shopping experience. All customer could enjoy our one-stop service.</p>
+      <h4>Day 1</h4>
+      <p>It is still “Day 1” and we continue to relentlessly focus on using our investments in technology and innovation to transform the lives of our customers and all our partners.</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p class="pull-right">Cover photo via
+    <a href="https://unsplash.com/jonasnilssonlee">Jonas Nilsson Lee</a>
+    / CC0
+  </p>
+  <p class="pull-left admin">
+    <a href="{% url 'admin:overview' %}" title="Vendor Admin Console">Vendor Console</a></p>
+</div>
+{% endblock %}
